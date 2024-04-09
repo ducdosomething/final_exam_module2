@@ -21,14 +21,14 @@ public class Main {
             System.out.println("3. Add student");
             System.out.println("4. Update student info");
             System.out.println("5. Delete student");
-            System.out.println("6. Sort students by age (Ascending)");
-            System.out.println("7. Sort students by age (Descending)");
+            System.out.println("6. Sort students by gpa (Ascending)");
+            System.out.println("7. Sort students by gpa (Descending)");
             System.out.println("8. Load students from file");
             System.out.println("9. Save students to file");
             System.out.println("0. Exit");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:

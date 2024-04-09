@@ -1,7 +1,6 @@
 package model;
 
 public class Student {
-    //Mã sv, ho ten, tuoi, gioi tinh, dia chi va diem trung binh
     private int id;
     private String name;
     private int age;
