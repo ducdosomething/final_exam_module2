@@ -25,7 +25,6 @@ public class Main {
             System.out.println("7. Sort students by age (Descending)");
             System.out.println("8. Load students from file");
             System.out.println("9. Save students to file");
-            //System.out.println("7. Search Student by Name");
             System.out.println("0. Exit");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
@@ -41,20 +40,30 @@ public class Main {
                 case 3:
                     StudentManager.addStudent(scanner, students);
                     ReadWriteFile.saveStudentsToFile(students);
+                    System.out.println("List of students after add:");
+                    StudentManager.viewAllStudents(students);
                     break;
                 case 4:
                     StudentManager.updateStudent(scanner, students);
                     ReadWriteFile.saveStudentsToFile(students);
+                    System.out.println("List of students after update:");
+                    StudentManager.viewAllStudents(students);
                     break;
                 case 5:
                     StudentManager.deleteStudent(scanner, students);
                     ReadWriteFile.saveStudentsToFile(students);
+                    System.out.println("List of students after delete:");
+                    StudentManager.viewAllStudents(students);
                     break;
                 case 6:
-                    StudentManager.sortStudentsByAgeAscending(students);
+                    StudentManager.sortStudentsByGpaAscending(students);
+                    System.out.println("List of students after sorting (Ascending):");
+                    StudentManager.viewAllStudents(students);
                     break;
                 case 7:
-                    StudentManager.sortStudentsByAgeDescending(students);
+                    StudentManager.sortStudentsByGpaDescending(students);
+                    System.out.println("List of students after sorting (Descending):");
+                    StudentManager.viewAllStudents(students);
                     break;
                 case 8:
                     ReadWriteFile.loadStudentsFromFile(students);
@@ -62,9 +71,6 @@ public class Main {
                 case 9:
                     ReadWriteFile.saveStudentsToFile(students);
                     break;
-//                case 7:
-//                    StudentManager.searchStudentByName(scanner, students);
-//                    break;
                 case 0:
                     System.out.println("Exiting program...");
                     System.exit(0);
